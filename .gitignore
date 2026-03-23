@@ -1,0 +1,20 @@
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# Environment files 
+.env
+
+# Node 
+node_modules/
+
+# Optional: large media backups 
+*.zip
+*.rar
