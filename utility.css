@@ -12,3 +12,12 @@
 .right-align{
     margin-left: auto;
 }
+
+.flex-column{
+    display: flex;
+    flex-direction: column;
+}
+
+.hidden{
+    display: none;
+}
