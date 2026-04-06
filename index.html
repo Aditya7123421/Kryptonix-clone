@@ -11,6 +11,7 @@
         rel="stylesheet"> -->
 
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="utility.css">
 </head>
 
 <body>
@@ -52,7 +53,7 @@
                         </div>
                         <div class="signup_field">
                             <p>Username or email <span class="red">*</span></p>
-                            <input type="text" class="signup_input" placeholder="Password">
+                            <input type="password" class="signup_input" placeholder="Password">
                         </div>
                         <div><button>Login</button></div>
                         <div class="signup_hover">Lost Your Password?</div>
@@ -67,7 +68,7 @@
                     </path>
                 </svg>
             </li>
-            <li>
+            <li id="shopBtn">
                 <svg data-slot="icon" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24"
                     xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                     <path stroke-linecap="round" stroke-linejoin="round"
@@ -88,6 +89,18 @@
     </nav>
 
 
+    <div class="overlay"></div>
+    <aside class="sidebar">
+        <header class="flex sidebar_header">
+            <p>Shopping Cart</p>
+            <p id="closeBtn" class="rigth-align">close <span style="font-size: 1.5rem;">×</span></p>
+        </header>
+        <main>
+            <div class="sidebar_empty">
+                No products in the cart.
+            </div>
+        </main>
+    </aside>
 
     <main class="mainhead">
         <div class="txt">

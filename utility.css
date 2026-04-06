@@ -1,0 +1,14 @@
+.red{
+    color: red;
+}
+.orange{
+    color: var(--o) !important;
+}
+
+.flex{
+    display: flex;
+}
+
+.right-align{
+    margin-left: auto;
+}

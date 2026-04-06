@@ -55,3 +55,25 @@ document.addEventListener("click", () => {
     loginIcon.classList.remove("orange");
     loginPage.style.visibility = "hidden";
 });
+
+
+// Side Panel Logic
+
+const shopBtn = document.getElementById("shopBtn");
+const closeBtn = document.getElementById("closeBtn");
+const sidePanel = document.querySelector(".sidebar");
+const overlay = document.querySelector(".overlay");
+
+shopBtn.addEventListener("click",()=>{
+    sidePanel.classList.add("active");
+    overlay.classList.add("active");
+})
+closeBtn.addEventListener("click",()=>{
+    sidePanel.classList.remove("active");
+    overlay.classList.remove("active");
+})
+
+overlay.addEventListener("click",()=>{
+    sidePanel.classList.remove("active");
+    overlay.classList.remove("active");
+})
