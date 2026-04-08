@@ -1,20 +1,24 @@
-# OS junk
-.DS_Store
-Thumbs.db
-
-# Editor files
-.vscode/
-.idea/
-
 # Logs
+logs
 *.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
 
-# Environment files 
-.env
+node_modules
+dist
+dist-ssr
+*.local
 
-# Node 
-node_modules/
-
-# Optional: large media backups 
-*.zip
-*.rar
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

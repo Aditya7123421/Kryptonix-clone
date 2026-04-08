@@ -20,6 +20,8 @@ html{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    /* height: 60px; */
+    /* padding: 10px 0; */
 }
 .leftmenu, .rightmenu, .lowernav ul{
     display: flex;
@@ -27,21 +29,21 @@ html{
     
 }
 .leftmenu li, .rightmenu li, .lowernav li {
-    font-size: 22px;
-    font-weight: 1000;
+    font-size: 16px;
+    font-weight: 700;
     line-height: 20px;
     padding: 10px;
     cursor: pointer;
 }
 
 .logo{
-    margin: 15px 30px;
+     margin: 5px 15px;
 }
 .rightmenu{
     margin-left: auto;
     padding-right: 3%;
     align-items: center;
-    gap: 0.5rem;
+    gap: 0.3rem;
 }
 
 .leftmenu{
@@ -51,8 +53,8 @@ html{
 
 
 .rightmenu svg{
-    height: 30px;
-    width: 30px;
+    height: 26px;
+    width: 26px;
     color: white;
 }
 
@@ -64,10 +66,10 @@ html{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 500px;
+    width: 400px;
     background-color: #eee;  
     border-radius: 8px;
-    padding: 12px 12px;        
+    padding: 6px 10px;       
 }
 
 .searchbar input {
@@ -75,9 +77,9 @@ html{
     border: none;
     outline: none;
     background: transparent;
-    font-size: 1.1rem;
+    font-size: 16px;
     color: #555555;
-    padding: 6px 10px;           
+    padding: 0 10px;           
 }
 
 .searchbar button {
@@ -110,14 +112,14 @@ html{
 }
 
 .lowernav li{
-    margin: 15px 20px;     
+    margin: 2px 20px;     
 }
 .lowernav li:hover{
     color: var(--o);
 }
 .mainhead{
-    height: 80vh;
-    background-image:url("images/backgrounds/herobg.webp");
+    height: 90vh;
+    background-image:url("herobg.webp");
     background-position: center center;
     width: 100%;
     background-size: cover;
@@ -127,7 +129,7 @@ html{
     justify-content: center;
     align-items: center;
     text-align: center;
-    gap: 80px;
+    gap: 70px;
     cursor: pointer;
 }
 .mainhead   .mainline >h1{
@@ -144,10 +146,10 @@ html{
 
 .otherline{
     color: #FFFFFF;
-    font-size: 34px;
-    font-weight: 600;
+    font-size: 25px;
+    font-weight: 500;
     line-height:1;
-    /* line-height: 82px; */
+    line-height: 82px;
 }
 .btn{
     background-color: black;
@@ -178,9 +180,9 @@ html{
 h1{
     margin: 0;  
 }
-.svghead svg,.svghead img{
-    height: 3.5em;
-    width: 3.5em;
+.svghead img{
+    height: 3.1rem;
+    width: 3.1rem;
     color: var(--o);
 }
 
@@ -205,18 +207,19 @@ h1{
     flex-direction: column;
 }
 .svgtext h3{
-    font-size: 1.4em;
+    font-size: 1.1rem;
     font-weight: bolder;
     color: black;
 }
 .svgtext p{
-    font-size: 1.1em;
-    color: gray;
+    font-size: 1rem;
+    font-weight: 500;
+    color: lightslategray;
 }
 
 .autovideo{
     display: flex;
-    margin: 180px 0px;
+    margin: 120px 0px;
     justify-content: center;
     align-items: center;
     height: 40vh;
@@ -290,12 +293,14 @@ h1{
     gap: 20px;
     width: 100%;
     margin: 20px auto;
+    padding: 0 20px;
 }
 
 .imgcard{
     position: relative;
     width: 100%;
-    height: 650px;
+    height: 450px;
+    border-radius: 10px;
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -324,7 +329,7 @@ h1{
     margin: 40px;
 }
 .images{
-    margin: 200px 0;
+    margin: 150px 0;
 }
 .subtitle > span{
     color: black;
@@ -363,9 +368,9 @@ h1{
     color: black;
     border: none;
     border-radius: 10px;
-    bottom: 10%;
-    height: 2.3em;
-    font-size: 1.3em;
+    bottom: 5%;
+    height: 2.1rem;
+    font-size: 1rem;
     width: 9em;
     font-weight: bolder;
     align-self:center;
@@ -392,7 +397,7 @@ h1{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 5%;
+    padding: 0 3%;
 }
 
 .blue_upper .text{
@@ -412,9 +417,9 @@ h1{
     padding: 2rem 0;
 }
 
-/* .uppertxt h2,h3{
+.uppertxt h2,h3{
     color: white
-} */
+}
 .uppertxt h3{
     font-size: 1.5rem;
     font-weight: 600;
@@ -439,7 +444,7 @@ font-size: 1.2rem;
 
 .verybigimg img{
     position: relative;
-    transform: scale(1.2);
+    transform: translate(0,-50px);
 }
 
 .blue_mid{
@@ -447,8 +452,9 @@ font-size: 1.2rem;
     justify-content: space-around;
     padding-bottom: 100px;
     border-bottom: #ffffff dotted 1px;
-    /* max-width: 1550px; */
-    margin: 0 auto;
+    border: none;
+    margin: 30px auto;
+    padding: 0 10px;
 
 }
 
@@ -466,7 +472,7 @@ font-size: 1.2rem;
 
 
 .cardimg{
-    height: 270px;
+    height: 200px;
     width: auto;
     align-self: center;
     overflow: hidden;
@@ -514,17 +520,17 @@ font-size: 1.2rem;
 }
 .imgdesc :nth-child(3){
     text-decoration:line-through;
-    font-size: 1.2em;
+    font-size: 1.1em;
     font-weight: 600;
     color: gray;
 }
 .imgdesc :nth-child(1){
     font-weight: 600;
-    font-size: 1.5em;
+    font-size: 1.15rem;
 }
 .imgdesc :nth-child(2){
     font-weight: 600;
-    font-size: 1.5em;
+    font-size: 1.15em;
     color: var(--o);
 }
 
@@ -537,15 +543,14 @@ font-size: 1.2rem;
     
 }
 
-
 .imgbtn1{
     background-color: #7FD07E;
     color: white;
     border-radius: 10px;
     border: none;
-    font-size: 1.3rem;
+    font-size: 1rem;
     font-weight: bold;
-    width: 55%;
+    width: 65%;
     height: 2rem;
     text-align: center;
     padding: 0 1.5rem;  
@@ -565,9 +570,9 @@ font-size: 1.2rem;
     color: white;
     border-radius: 10px;
     border: none;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     font-weight: bold;
-    width: 90%;
+    width: 100%;
     height: 3rem;
     text-align: left;
     padding: 0 2rem;
@@ -576,6 +581,7 @@ font-size: 1.2rem;
 
 .buttons p{
     font-weight: bold;
+    font-size: 0.8rem;
 }
 .buttons p span{
     font-weight: bold;
@@ -602,8 +608,8 @@ footer{
     align-items: center;
     padding: 4rem 3rem;
     border-bottom: gray solid 1px;
-    gap: 2rem;
-    /* max-width: 1400px; */
+    gap: 3rem;
+    max-width: 1400px;
     margin: auto;
 
 }
@@ -626,20 +632,20 @@ footer{
 
 .ftr_text{
     color: gray;
-    font-size: 1.25rem;
+    font-size: 1rem;
     font-weight: 600;
     line-height: 1.875rem;
 }
 .ftr_number{
     color: var(--o);
-    font-size: 2.375rem;
+    font-size: 1.7rem;
     font-weight: 700;
     line-height: 1.875rem;
 }
 
 .ftr_title{
     color: white;
-    font-size: 1.875rem;
+    font-size: 1.5rem;
     font-weight: 700;
     line-height: 2.25rem;
 }
@@ -678,19 +684,9 @@ footer{
     display: flex;
     justify-content: space-around;
     align-items: flex-start;
-    padding: 4rem 0;
-    /* max-width: 1400px; */
+    padding: 4rem 1rem;
+    max-width: 1400px;
     margin: auto;
-}
-
-.ftr_mid .ftr_number{
-    font-size: 1.8rem;
-}
-.ftr_mid .ftr_text{
-    font-size: 1.2rem;
-}
-.ftr_mid .ftr_title{
-    font-size: 1.5rem;
 }
 
 .ftr_card{
@@ -731,10 +727,10 @@ footer{
 
 .clients{
     display: flex;
-    padding: 3rem 0;
-    max-width: 1700px;
-    border-bottom: gray solid 1px;
-    border-top: gray solid 1px;
+    padding: 3rem 2rem;
+    max-width: 1400px;
+    border-bottom: lightgray solid 1px;
+    border-top: lightgray solid 1px;
     margin: 4rem auto;
     justify-content: center;
     align-items: center;
@@ -742,7 +738,7 @@ footer{
 }
 
 .clients_title{
-    font-size: 2.25rem;
+    font-size: 1.7rem;
     font-weight: bolder;
     text-transform: uppercase;
     flex: 1;
@@ -797,7 +793,7 @@ footer{
     display: flex;
     flex-direction: column;
     background-color: var(--w);
-    padding: 100px 0;
+    padding: 50px 0;
     gap: 3rem;
 }
 
@@ -805,10 +801,10 @@ footer{
     text-align: center;
 }
 .customer-review_title h1{
-    font-size: 3em;
+    font-size: 2.5em;
 }
 .customer-review_title h3{
-    font-size: 1.2em;
+    font-size: 1.15em;
 }
 
 .customer-review_grid{
@@ -830,7 +826,7 @@ footer{
 }
 
 .customer-review_card .star{
-    font-size: 2rem;
+    font-size: 1.6rem;
 }
 
 .customer-review_card_title{
@@ -842,8 +838,8 @@ footer{
     font-weight: 700;
 }
 .customer-review_card-summary{
-    font-size: 1.3rem;
-    font-weight: 500;
+    font-size: 1rem;
+    font-weight: 400; 
     overflow-y: auto;
     flex: 1;
 }
@@ -945,7 +941,7 @@ footer{
 .sidebar{
     position: fixed;
     height: 100vh;
-    width: 25%;
+    width: 27%;
     z-index: 1000;
     background-color: #fff;
     top: 0;
@@ -977,14 +973,14 @@ footer{
 
 #closeBtn{
     cursor: pointer;
-    font-size: 1.25rem;
+    font-size: 1.1rem;
 }
 
 .sidebar_header{
     justify-content: space-between;
     align-items: baseline;
-    padding: 1.5rem;
-    font-size: 1.5rem;
+    padding: 1rem;
+    font-size: 1.2rem;
     font-weight: 600;
     border-bottom: var(--w) 2px solid;
 }
@@ -993,7 +989,7 @@ footer{
     color: #888888;
     width: 100%;
     text-align: center;
-    font-size: 1.45rem;
+    font-size: 1rem;
     font-weight: 400;
     margin: 3rem 1rem;
 }
@@ -1024,17 +1020,17 @@ footer{
     gap: 0.4rem;
 }
 .sidebar_card-text p:first-child {
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-weight: 600;
-    line-height: 3rem;
+    line-height: 2rem;
     cursor: pointer;
 }
 .sidebar_card-text p:first-child:hover {
     color: var(--o);
 }
 .sidebar_card-text p:last-child {
-    font-size: 1.5rem;
-    line-height: 3rem;
+    font-size: 1rem;
+    line-height: 2rem;
     font-weight: 500;
     color: #555;
 }
@@ -1097,4 +1093,28 @@ footer{
 
 .sidebar-btn:hover {
     background: var(--o);
+}
+
+.red{
+    color: red;
+}
+.orange{
+    color: var(--o) !important;
+}
+
+.flex{
+    display: flex;
+}
+
+.right-align{
+    margin-left: auto;
+}
+
+.flex-column{
+    display: flex;
+    flex-direction: column;
+}
+
+.hidden{
+    display: none;
 }
