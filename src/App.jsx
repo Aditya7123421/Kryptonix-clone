@@ -13,28 +13,53 @@ import product4 from './assets/images/products/product4.webp'
 import Clients from "./components/Clients"
 import Customer from "./components/Customer"
 import Footer from "./components/Footer"
+import Sidebar from "./components/Sidebar"
+import { useState } from "react"
 
 function App() {
+  const [panelOpen, setPanelOpen] = useState(false)
+  const [cart, setCart] = useState([])
+
+  const addToCart = (item) => {
+    const alreadyInCart = cart.find(i => i.id === item.id)
+    if (alreadyInCart) {
+      setPanelOpen(true)
+      return
+    }
+    setCart([...cart, item])
+    setPanelOpen(true)
+  }
+
+  const removeFromCart = (id) => {
+    setCart(cart.filter(i => i.id !== id))
+  }
+
+  const total = cart.reduce((sum, item) => {
+    const price = parseFloat(item.price.replace(/[₹,]/g, ""))
+    return sum + price
+  }, 0)
   return (
     <>
-      <Header />
-      <Navbar/>
+      <Header setPanelOpen={setPanelOpen} />
+      <Navbar />
       <Hero />
-      <Banner/>
-      <Videobanner/>
+      <Banner />
+      <Videobanner />
+      <Sidebar cart={cart} removeFromCart={removeFromCart} total={total} panelOpen={panelOpen} setPanelOpen={setPanelOpen} />
+
       <Images></Images>
       <article className="bluearea">
-        <Blueupper/>
+        <Blueupper />
         <div className="blue_mid">
-          <Amazoncard img = {product1} name = "Gigabyte GS27QA 27 Inch Gaming Monitor" newPrice ="₹14,990.00" oldPrice="₹45,000.00" emi ="₹1372"/>
-          <Amazoncard img = {product2} name = "Lenovo Legion R25F-30 25 Inch Gaming Monitor" newPrice ="₹12,890.00" oldPrice="₹20,290.00" emi ="₹1179"/>
-          <Amazoncard img = {product3} name = "LG UltraGear 24GS65F-B 24 Inch Gaming Monitor" newPrice ="₹10,390.00" oldPrice="₹20,000.00" emi ="₹951"/>
-          <Amazoncard img = {product4} name = "MSI MAG 255F E20 25 INCH FHD Gaming Monitor" newPrice ="₹9,490.00" oldPrice="₹12,999.00" emi ="₹1242"/>
+          <Amazoncard img={product1} name="Gigabyte GS27QA 27 Inch Gaming Monitor" newPrice="₹14,990.00" oldPrice="₹45,000.00" emi="₹1372" addToCart={addToCart} id="1"/>
+          <Amazoncard img={product2} name="Lenovo Legion R25F-30 25 Inch Gaming Monitor" newPrice="₹12,890.00" oldPrice="₹20,290.00" emi="₹1179" addToCart={addToCart} id="2"/>
+          <Amazoncard img={product3} name="LG UltraGear 24GS65F-B 24 Inch Gaming Monitor" newPrice="₹10,390.00" oldPrice="₹20,000.00" emi="₹951" addToCart={addToCart} id="3"/>
+          <Amazoncard img={product4} name="MSI MAG 255F E20 25 INCH FHD Gaming Monitor" newPrice="₹9,490.00" oldPrice="₹12,999.00" emi="₹1242" addToCart={addToCart} id="4"/>
         </div>
       </article>
       <Clients />
-      <Customer/>
-      <Footer/>
+      <Customer />
+      <Footer />
     </>
   )
 }

@@ -18,7 +18,7 @@ const Banner = () => {
             </div>
         </div>
         <div className="svgcard">
-            <div class="svghead">
+            <div className="svghead">
                 <img src={creditcard} alt="creditcard"/>
             </div>
             <div className="svgtext">

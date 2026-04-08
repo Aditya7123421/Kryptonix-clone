@@ -2,7 +2,7 @@ import React from 'react'
 
 const Navbar = () => {
   return (
-     <nav class="lowernav">
+     <nav className="lowernav">
         <ul>
             <li>CUSTOM PC</li>
             <li>PREBUILY PC</li>

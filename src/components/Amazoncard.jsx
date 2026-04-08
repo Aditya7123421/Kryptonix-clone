@@ -1,12 +1,42 @@
 import React from 'react'
 import product1 from '../assets/images/products/product1.webp'
+import { useState } from 'react'
 
-const Amazoncard = ({img, name, newPrice, oldPrice,emi}) => {
+const Amazoncard = ({ img, name, newPrice, oldPrice, emi, addToCart,id }) => {
+    const [hovered, setHovered] = useState(false)
+    const [btnText, setBtnText] = useState("In Stock")
+    const [changing, setChanging] = useState(false)
+    const handleAddToCart = () => {
+    addToCart({
+      id: id,
+      name: name,
+      img: img,
+      price: newPrice
+    })
+  }
+
+    const handleMouseEnter = () => {
+        setHovered(true)
+        setChanging(true)
+        setTimeout(() => {
+            setBtnText("Add To Cart")
+            setChanging(false)
+        }, 200)
+    }
+
+    const handleMouseLeave = () => {
+        setHovered(false)
+        setChanging(true)
+        setTimeout(() => {
+            setBtnText("In Stock")
+            setChanging(false)
+        }, 200)
+    }
     return (
-        <div className="amazoncard">
+        <div className="amazoncard" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
             <div className="cardhead">AMAZING DEALS</div>
             <div className="cardimg">
-                <img src={img} alt="product1"/>
+                <img src={img} alt="product1" className={`${hovered ? 'cardimg_hover' : 'cardimg_leave'}`} />
             </div>
             <div className="imgdesc">
                 <p>{name}</p>
@@ -14,7 +44,10 @@ const Amazoncard = ({img, name, newPrice, oldPrice,emi}) => {
                 <p>{oldPrice}</p>
             </div>
             <div className="buttons">
-                <button className="imgbtn1" data-id="1"><span className="imgbtn1_txt">In Stock</span></button>
+                <button className="imgbtn1" onClick={handleAddToCart} style={{ backgroundColor: hovered ? '#e65c2e' : '#7FD07E' }} data-id="1">
+                    <span className={`imgbtn1_txt ${changing ? 'change' : ''}`}>{btnText}</span>
+                </button>
+
                 <button className="imgbtn2">Buy Now</button>
                 <p>or {emi}/Month <span>Buy on EMI</span></p>
             </div>

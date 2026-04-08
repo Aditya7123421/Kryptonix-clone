@@ -7,11 +7,11 @@ import client5 from '../assets/images/banners/clients5.webp'
 
 const Clients = () => {
   return (
-    <article class="clients">
-        <div class="clients_title">
-            <div class="orange">Some of our</div> Popular Clients
+    <article className="clients">
+        <div className="clients_title">
+            <div className="orange">Some of our</div> Popular Clients
         </div>
-        <div class="clients_images">
+        <div className="clients_images">
             <img src={client1} alt="clients1"/>
             <img src={client2} alt="clients2"/>
             <img src={client3} alt="clients3"/>
