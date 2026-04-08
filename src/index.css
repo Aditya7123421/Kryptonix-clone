@@ -608,8 +608,8 @@ footer{
     align-items: center;
     padding: 4rem 3rem;
     border-bottom: gray solid 1px;
-    gap: 2rem;
-    /* max-width: 1400px; */
+    gap: 3rem;
+    max-width: 1400px;
     margin: auto;
 
 }
@@ -632,20 +632,20 @@ footer{
 
 .ftr_text{
     color: gray;
-    font-size: 1.25rem;
+    font-size: 1rem;
     font-weight: 600;
     line-height: 1.875rem;
 }
 .ftr_number{
     color: var(--o);
-    font-size: 2.375rem;
+    font-size: 1.7rem;
     font-weight: 700;
     line-height: 1.875rem;
 }
 
 .ftr_title{
     color: white;
-    font-size: 1.875rem;
+    font-size: 1.5rem;
     font-weight: 700;
     line-height: 2.25rem;
 }
@@ -684,19 +684,9 @@ footer{
     display: flex;
     justify-content: space-around;
     align-items: flex-start;
-    padding: 4rem 0;
-    /* max-width: 1400px; */
+    padding: 4rem 1rem;
+    max-width: 1400px;
     margin: auto;
-}
-
-.ftr_mid .ftr_number{
-    font-size: 1.8rem;
-}
-.ftr_mid .ftr_text{
-    font-size: 1.2rem;
-}
-.ftr_mid .ftr_title{
-    font-size: 1.5rem;
 }
 
 .ftr_card{
@@ -737,10 +727,10 @@ footer{
 
 .clients{
     display: flex;
-    padding: 3rem 0;
-    max-width: 1700px;
-    border-bottom: gray solid 1px;
-    border-top: gray solid 1px;
+    padding: 3rem 2rem;
+    max-width: 1400px;
+    border-bottom: lightgray solid 1px;
+    border-top: lightgray solid 1px;
     margin: 4rem auto;
     justify-content: center;
     align-items: center;
@@ -748,7 +738,7 @@ footer{
 }
 
 .clients_title{
-    font-size: 2.25rem;
+    font-size: 1.7rem;
     font-weight: bolder;
     text-transform: uppercase;
     flex: 1;
@@ -803,7 +793,7 @@ footer{
     display: flex;
     flex-direction: column;
     background-color: var(--w);
-    padding: 100px 0;
+    padding: 50px 0;
     gap: 3rem;
 }
 
@@ -811,10 +801,10 @@ footer{
     text-align: center;
 }
 .customer-review_title h1{
-    font-size: 3em;
+    font-size: 2.5em;
 }
 .customer-review_title h3{
-    font-size: 1.2em;
+    font-size: 1.15em;
 }
 
 .customer-review_grid{
@@ -836,7 +826,7 @@ footer{
 }
 
 .customer-review_card .star{
-    font-size: 2rem;
+    font-size: 1.6rem;
 }
 
 .customer-review_card_title{
@@ -848,8 +838,8 @@ footer{
     font-weight: 700;
 }
 .customer-review_card-summary{
-    font-size: 1.3rem;
-    font-weight: 500;
+    font-size: 1rem;
+    font-weight: 400; 
     overflow-y: auto;
     flex: 1;
 }

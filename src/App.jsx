@@ -10,10 +10,11 @@ import product1 from './assets/images/products/product1.webp'
 import product2 from './assets/images/products/product2.webp'
 import product3 from './assets/images/products/product3.webp'
 import product4 from './assets/images/products/product4.webp'
+import Clients from "./components/Clients"
+import Customer from "./components/Customer"
+import Footer from "./components/Footer"
 
 function App() {
-
-
   return (
     <>
       <Header />
@@ -31,6 +32,9 @@ function App() {
           <Amazoncard img = {product4} name = "MSI MAG 255F E20 25 INCH FHD Gaming Monitor" newPrice ="₹9,490.00" oldPrice="₹12,999.00" emi ="₹1242"/>
         </div>
       </article>
+      <Clients />
+      <Customer/>
+      <Footer/>
     </>
   )
 }
