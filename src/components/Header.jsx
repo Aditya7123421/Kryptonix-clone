@@ -2,33 +2,43 @@ import React from 'react'
 import mainicon from '../assets/images/icons/mainicon.webp'
 import { useState,useEffect } from 'react'
 
-const Header = ({ setPanelOpen }) => {
-    const [loginOpen, setLoginOpen] = useState(false)
+// Header component: contains navigation, search, login popup, and cart button
 
+const Header = ({ setPanelOpen }) => {
+    // Controls visibility of login/signup popup
+    const [loginOpen, setLoginOpen] = useState(false)
+    // Toggle login popup on icon click
     const handleLoginClick = (e) => {
-        e.stopPropagation()
+        e.stopPropagation() // Prevents click from bubbling to document
         setLoginOpen(!loginOpen)
     }
+    // Close login popup when clicking anywhere outside
     useEffect(() => {
         const close = () => setLoginOpen(false)
         document.addEventListener('click', close)
+        // Cleanup to avoid memory leaks
         return () => document.removeEventListener('click', close)
     }, [])
 
     return (
         <header className="uppernav">
+            {/* Logo */}
             <div className="logo">
                 <img src={mainicon} alt="main" />
             </div>
+            {/* Left navigation menu */}
             <ul className="leftmenu">
                 <li>Home</li>
                 <li>About Us</li>
                 <li>Contact Us</li>
             </ul>
+            {/* Right section: search + icons */}
             <ul className="rightmenu">
+                {/* Search bar */}
                 <li className="searchbar">
                     <input type="text" placeholder="What are you looking for?" />
                     <button>
+                        {/* Search icon (SVG) */}
                         <svg data-slot="icon" fill="none" strokeWidth="1.5" stroke="currentColor" viewBox="0 0 24 24"
                             xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                             <path strokeLinecap="round" strokeLinejoin="round"
@@ -38,29 +48,38 @@ const Header = ({ setPanelOpen }) => {
                 </li>
                 <li>Blog</li>
                 <li>Career</li>
+                {/* Login icon + popup */}
                 <li id="login_hover" onClick={handleLoginClick}>
+                    {/* Icon turns orange when active */}
                     <svg className={loginOpen ? 'orange' : ''} data-slot="icon" fill="none" strokeWidth="1.5" stroke="currentColor" viewBox="0 0 24 24"
                         xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                         <path strokeLinecap="round" strokeLinejoin="round"
                             d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z">
                         </path>
                     </svg>
-                    <article className="signup_container" id="login" style={{ visibility: loginOpen ? 'visible' : 'hidden' }} onClick={(e) => e.stopPropagation()}>
+                    {/* Login popup */}
+                    <article className="signup_container" id="login" style={{ visibility: loginOpen ? 'visible' : 'hidden' }} onClick={(e) => e.stopPropagation()}> // Prevent closing when clicking inside
                         <div className="signup_box">
+                            {/* Header */}
                             <h3><span>Sign in</span><span className="signup_hover">Create an Account</span></h3>
+                            {/* Username/email field */}
                             <div className="signup_field">
                                 <p>Username or email <span className="red">*</span></p>
                                 <input type="text" className="signup_input" placeholder="Username" />
                             </div>
+                            {/* Password field */}
                             <div className="signup_field">
                                 <p>Username or email <span className="red">*</span></p>
                                 <input type="password" className="signup_input" placeholder="Password" />
                             </div>
+                            {/* Login button */}
                             <div><button>Login</button></div>
+                            {/* Forgot password */}
                             <div className="signup_hover">Lost Your Password?</div>
                         </div>
                     </article>
                 </li>
+                {/* Wishlist icon */}
                 <li>
                     <svg data-slot="icon" fill="none" strokeWidth="1.5" stroke="currentColor" viewBox="0 0 24 24"
                         xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -69,6 +88,7 @@ const Header = ({ setPanelOpen }) => {
                         </path>
                     </svg>
                 </li>
+                {/* Cart icon → opens sidebar */}
                 <li id="shopBtn" onClick={() => setPanelOpen(true)}>
                     <svg data-slot="icon" fill="none" strokeWidth="1.5" stroke="currentColor" viewBox="0 0 24 24"
                         xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
