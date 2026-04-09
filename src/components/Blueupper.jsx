@@ -1,8 +1,9 @@
 import React from 'react'
-
+// Top section of the blue product area (offer + timer + image)
 const Blueupper = () => {
   return (
     <div className="blue_upper">
+      {/* Left side: promotional text + countdown */}
             <div className="text">
                 <div className="uppertxt">
                     <h1>LIMITED</h1>
