@@ -1,3 +1,7 @@
+/* 
+   GLOBAL VARIABLES + RESET
+   Defines theme colors and removes default browser styling
+ */
 :root{
     --o : #e65c2e;
     --w : #F3F5FA;
@@ -14,6 +18,10 @@
 html{
     font-size: 16px;
 }
+/* 
+   NAVIGATION (HEADER + MENUS)
+   Handles top bar, menus, icons, and search bar
+ */
 .uppernav{
     background-color: black;
     color: white;
@@ -62,6 +70,10 @@ html{
     color: var(--o);
 }
 
+/* 
+   SEARCH BAR COMPONENT
+   Input + icon layout using flexbox
+ */
 .searchbar {
     display: flex;
     align-items: center;
@@ -99,6 +111,12 @@ html{
 .searchbar button svg:hover{
     color: black;
 }
+
+/* 
+   LOWER NAVBAR (STICKY)
+   Stays fixed at top during scroll
+ */
+
 .lowernav{
     position: sticky;
     top:0;
@@ -117,6 +135,10 @@ html{
 .lowernav li:hover{
     color: var(--o);
 }
+/* 
+   HERO SECTION
+   Full screen landing section with background image and heading
+ */
 .mainhead{
     height: 90vh;
     background-image:url("herobg.webp");
@@ -151,6 +173,10 @@ html{
     line-height:1;
     line-height: 82px;
 }
+/* 
+   BUTTON STYLES
+   Common button styling used across the site
+ */
 .btn{
     background-color: black;
     color: #FFFFFF;
@@ -186,6 +212,11 @@ h1{
     color: var(--o);
 }
 
+/* 
+   FEATURE ICON CARDS
+   Small icon + text blocks below hero section
+ */
+
 .svgcard{
     display: flex;
     align-items: center;
@@ -216,6 +247,11 @@ h1{
     font-weight: 500;
     color: lightslategray;
 }
+
+/* 
+   VIDEO SECTION
+   Background video with overlay text and CTA button
+ */
 
 .autovideo{
     display: flex;
@@ -285,6 +321,12 @@ h1{
     color: #FFFFFF;
     cursor: pointer;
 }
+
+/* 
+   IMAGE GRID SECTION
+   Grid layout with overlay text and buttons
+ */
+
 .sectionimg{
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
@@ -386,7 +428,10 @@ h1{
     align-self: center;
     text-align: center;
 }
-
+/* 
+   PRODUCT SECTION (BLUE AREA)
+   Contains featured products and pricing cards
+ */
 .bluearea{
     background-color: var(--b);
     display: flex;
@@ -457,7 +502,10 @@ font-size: 1.2rem;
     padding: 0 10px;
 
 }
-
+/* 
+   PRODUCT CARDS
+   Individual item cards with image, price, and buttons
+ */
 .amazoncard{
     display: flex;
     flex-direction: column;
@@ -482,6 +530,10 @@ font-size: 1.2rem;
     width: 100%;
     object-fit: cover;
 }
+/* 
+   IMAGE HOVER ANIMATIONS
+   Zoom + flicker effect on hover
+ */
 @keyframes zoomFlicker {
     0%   { transform: scale(1); opacity: 0.8; }
     25%  {  opacity: 0.4; }
@@ -595,9 +647,10 @@ main{
     height: 200px;
 }
 
-/* =========================
-   FOOTER
-========================= */
+/* 
+   FOOTER SECTION
+   Contact info, links, and subscription form
+ */
 footer{
     background-color: var(--ftr_bg);
 }
@@ -708,6 +761,10 @@ footer{
     background-color: black;
     padding: 1rem 3rem 3rem 3rem;
 }
+/* 
+   RESPONSIVE DESIGN
+   Adjusts layout for smaller screens
+ */
 @media (max-width:768px) {  
     html{
         font-size: 14px;
@@ -724,6 +781,11 @@ footer{
         
     }
 }
+
+/* 
+   CLIENTS / BRANDS SECTION
+   Displays partner logos in grid layout
+ */
 
 .clients{
     display: flex;
@@ -785,9 +847,10 @@ footer{
 }
 
 
-/* =========================
-   CUSTOMER REVIEW
-========================= */
+/* 
+   CUSTOMER REVIEWS
+   Grid of review cards with ratings and text
+ */
 
 .customer-review{
     display: flex;
@@ -862,6 +925,10 @@ footer{
     transition: scale 1s ease-out;
 }
 
+/* 
+   AUTH MODAL (SIGNUP / LOGIN)
+   Floating form for user authentication
+ */
 
 .signup_box{
     position: absolute;
@@ -934,9 +1001,10 @@ footer{
     text-decoration: underline dotted;
 }
 
-/* =========================
-  Side Bar
-========================= */
+/* 
+   SIDEBAR (SHOPPING CART)
+   Slide-in panel with overlay background
+ */
 
 .sidebar{
     position: fixed;
@@ -1094,6 +1162,11 @@ footer{
 .sidebar-btn:hover {
     background: var(--o);
 }
+
+/* 
+   UTILITY CLASSES
+   Reusable helpers for layout and colors
+ */
 
 .red{
     color: red;

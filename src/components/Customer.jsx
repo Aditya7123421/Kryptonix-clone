@@ -1,14 +1,17 @@
 import React from 'react'
+// Importing icons used in review cards
 import google from '../assets/images/icons/google_icon.svg'
 import icon1 from '../assets/images/icons/review_icon1.png'
 import icon2 from '../assets/images/icons/review_icon2.png'
 import icon3 from '../assets/images/icons/review_icon3.png'
 import icon4 from '../assets/images/icons/review_icon4.png'
 
+// Customer reviews section displaying ratings and feedback
 
 const Customer = () => {
   return (
     <section className="customer-review">
+      {/* Section title with overall rating */}
         <div className="customer-review_title">
             <h1><span className="orange">CUSTOMER</span> REVIEW</h1>
             <h3>
@@ -17,11 +20,14 @@ const Customer = () => {
                 <span className="black"> View all 200+ Reviews</span>
             </h3>
         </div>
+      {/* Grid containing multiple review cards */}
         <div className="customer-review_grid">
+          {/* Each card represents a single customer review */}
             <div className="customer-review_card">
                 <div className="customer-review_card_google">
                     <img src={google} alt="google_icon"/>
                 </div>
+              {/* Reviewer info */}
                 <div className="customer-review_card_title">
                     <div className="customer-review_card_icon">
                         <img src={icon1} alt="review_icon1"/>
@@ -31,9 +37,11 @@ const Customer = () => {
                         <p className="gray">10 months ago</p>
                     </div>
                 </div>
+              {/* Rating + review text */}
                 <div className="star">★★★★★</div>
                 <div className="customer-review_card-summary">Best</div>
             </div>
+          {/* Remaining cards follow same structure */}
             <div className="customer-review_card">
                 <div className="customer-review_card_google">
                     <img src={google} alt="google_icon"/>

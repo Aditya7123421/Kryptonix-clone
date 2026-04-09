@@ -1,13 +1,17 @@
 import React from 'react'
+// Importing icons used in the feature banner
 import truck from '../assets/images/icons/truck.svg'
 import camera from '../assets/images/icons/camera.svg'
 import creditcard from '../assets/images/icons/creditcard.svg'
 import folder from '../assets/images/icons/folder.svg'
 import cash from '../assets/images/icons/cash.svg'
 
+// Banner component showing key features/services
+
 const Banner = () => {
   return (
     <div className="bottomhead">
+      {/* Each svgcard represents one feature block */}
         <div className="svgcard">
             <div className="svghead">
                 <img src={truck} alt="truck"/>

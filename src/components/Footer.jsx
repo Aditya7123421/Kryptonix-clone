@@ -1,10 +1,14 @@
 import React from 'react'
 import call from '../assets/images/icons/call.svg'
 
+// Footer component containing contact info, links, and subscription form
+
 const Footer = () => {
   return (
     <footer>
+      {/* Top section: contact info + newsletter subscription */}
         <div className="ftr_upper">
+          {/* Contact (call support) */}
             <div className="ftr_svgcontainer">
                 <div className="ftr_svg">
                     <img src={call} alt="call"/>
@@ -16,10 +20,16 @@ const Footer = () => {
                     <div className="ftr_number">(+91) 9818077300</div>
                 </div>
             </div>
+          
+            {/* Subscription text */}
+          
             <div>
                 <div className="ftr_title">Subscribe to our mailing list</div>
                 <div className="ftr_text">Ready for something awesome? Join now and get rewarded instantly!</div>
             </div>
+          
+            {/* Email input + subscribe button */}
+          
             <div className="ftr_textbox">
                 <div className="ftr_form">
                     <input type="text" placeholder="Enter email address..."/>
@@ -27,7 +37,9 @@ const Footer = () => {
                 </div>
             </div>
         </div>
+        {/* Middle section: footer links grouped into categories */}
         <div className="ftr_mid">
+            {/* Support details */}
             <div className="ftr_card">
                 <div className="ftr_title">Support</div>
                 <div>
@@ -40,6 +52,7 @@ const Footer = () => {
                 </div>
 
             </div>
+            {/* Company links */}
             <div className="ftr_card">
                 <div className="ftr_title">Company</div>
                 <div>
@@ -49,6 +62,7 @@ const Footer = () => {
                     <div className="ftr_text">FAQS</div>
                 </div>
             </div>
+            {/* Quick navigation links */}
             <div className="ftr_card">
                 <div className="ftr_title">Quick Links</div>
                 <div>
@@ -58,6 +72,7 @@ const Footer = () => {
                     <div className="ftr_text">Return &amp; Shipping Policy</div>
                 </div>
             </div>
+            {/* User account links */}
             <div className="ftr_card">
                 <div className="ftr_title">My Account</div>
                 <div>
@@ -67,6 +82,7 @@ const Footer = () => {
                     <div className="ftr_text">Orders</div>
                 </div>
             </div>
+            {/* Address and email */}
             <div className="ftr_card">
                 <div className="ftr_title">Address</div>
                 <div>
